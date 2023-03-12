@@ -31,3 +31,42 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.accordeon-section {
+    display: grid;
+    grid-template: 50px 20% / 500px 20px;
+    margin: 0 auto;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.accordeon-text {
+    margin: auto 0;
+}
+
+.accodeon-img {
+    display: none;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.accordeon-button1:checked + .accodeon-img.first {
+    display: block;
+}
+
+.accordeon-button2:checked + .accodeon-img.second {
+    display: block;
+}
+
+.accordeon-button3:checked + .accodeon-img.third {
+    display: block;
+}
+
+.accordeon-button4:checked + .accodeon-img.fourth {
+    display: block;
+}
+
+.accordeon-button5:checked + .accodeon-img.fifth {
+    display: block;
+}
