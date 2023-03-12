@@ -10,6 +10,7 @@ body * {
     text-decoration: none;  
     color: black;
     font-family: 'Inter', sans-serif;
+    transition: all 0.5s;
 }
 
 body {
@@ -31,6 +32,7 @@ body {
 .accordeon-section {
     display: grid;
     grid-template: 50px 20% / 500px 20px;
+    position: relative;
     margin: 0 auto;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
@@ -40,15 +42,36 @@ body {
     margin: auto 0;
 }
 
+.accordeon-text:hover {
+    color: rgb(149, 77, 216);
+    transition: all 0.3s;
+}
+
+.accordeon-text:hover ~ .accodeon-img {
+    display: block;
+    transition: all 0.5s;
+}
+
 .accodeon-img {
     display: none;
     width: 300px;
     height: 300px;
     margin: 15px auto;
+    transition: all 0.5s;
 }
 
 .accordeon-button {
     appearance: none;
+}
+
+.button-styling {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background-color: red;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 2%;
 }
 
 .accordeon-button.one:checked + .accodeon-img.first {
